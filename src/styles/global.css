@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body,
+input,
+textarea,
+select,
+button {
+  font: 400 1rem 'Spartan', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: #f6f7f8;
+}
