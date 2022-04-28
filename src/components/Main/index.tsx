@@ -1,4 +1,4 @@
-import { mainContentItems } from '../utils/mainContent';
+import { mainContentItems } from '../../utils/mainContent';
 
 import { RiExternalLinkLine } from 'react-icons/ri';
 

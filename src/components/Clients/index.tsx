@@ -1,4 +1,4 @@
-import { clientLogos } from '../utils/clientLogos';
+import { clientLogos } from '../../utils/clientLogos';
 
 export const Clients = () => {
   return (

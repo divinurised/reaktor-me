@@ -1,5 +1,5 @@
 import { AnimatedTitle } from '../AnimatedTitle';
-import { footerMenuContent } from '../utils/footerMenuContent';
+import { footerMenuContent } from '../../utils/footerMenuContent';
 
 export const FooterMenu = () => {
   return (

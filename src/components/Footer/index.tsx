@@ -1,4 +1,4 @@
-import { address } from '../utils/Address';
+import { address } from '../../utils/Address';
 import {
   RiFacebookBoxFill,
   RiTwitterFill,
