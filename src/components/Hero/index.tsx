@@ -12,7 +12,7 @@ export const Hero = () => {
           Consultancy and agency services, built on exceptional technological
           competence.
         </h2>
-        <Button>Get in touch</Button>
+        <Button className="text-white">Get in touch</Button>
       </section>
     </>
   );
