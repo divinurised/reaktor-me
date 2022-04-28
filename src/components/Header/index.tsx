@@ -1,10 +1,22 @@
 import { ReaktorLogo } from '../../public/assets/logos/ReaktorLogo';
 import { AnimatedTitle } from '../AnimatedTitle';
-import { navbarItems } from '../utils/navbarContent';
+import { navbarItems } from '../../utils/navbarContent';
+import { useContext, useEffect, useRef, useState } from 'react';
+import { ScrollContext } from '../../contexts/ScrollContext';
 
 export const Header = () => {
+  const headerRef = useRef<HTMLElement>(null);
+  const { scrollY } = useContext(ScrollContext);
+  let progress = 0;
+
+  const { current: elementContainer } = headerRef;
+
+  if (elementContainer) {
+    progress = Math.min(1, scrollY / elementContainer.clientHeight);
+  }
+
   return (
-    <header className="p-8 flex items-center justify-between">
+    <header ref={headerRef} className="p-8 flex items-center justify-between">
       <a href="/" className="font-bold text-xl leading-6 px-8">
         Reaktor
       </a>
