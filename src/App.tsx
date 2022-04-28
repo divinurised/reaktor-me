@@ -6,14 +6,15 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Main } from './components/Main';
 import { SouthPole } from './components/SouthPole';
+import ScrollObserver from './contexts/ScrollContext';
 
 function App() {
   return (
-    <>
+    <ScrollObserver>
       <Header />
       <Hero />
       <Main />
-      <section className="w-full h-full pl-[35rem] pr-24 py-32">
+      <section className="w-full h-full pl-[40rem] pr-20 py-36">
         <h1 className="text-5xl font-medium leading-[70px] mb-8">
           We make future products and services, and help our clients adapt and
           remain ahead in an increasingly complex world.
@@ -30,7 +31,7 @@ function App() {
       <SouthPole />
       <FooterMenu />
       <Footer />
-    </>
+    </ScrollObserver>
   );
 }
 
