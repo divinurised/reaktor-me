@@ -3,8 +3,8 @@ import { Button } from '../Button';
 export const Hero = () => {
   return (
     <>
-      <section className="w-full h-full bg-black pl-[35rem] pr-22 py-32">
-        <h1 className="text-white text-5xl font-medium leading-[70px] mb-16">
+      <section className="w-full h-full bg-black pl-[40rem] pr-20 py-36">
+        <h1 className="text-white text-[3.2rem] font-medium leading-[70px] mb-16">
           A strategy, design, and technology partner for forward-thinking
           companies and societies.
         </h1>
