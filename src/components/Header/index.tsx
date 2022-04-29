@@ -1,4 +1,4 @@
-import { ReaktorLogo } from '../../public/assets/logos/ReaktorLogo';
+import { ReaktorLogo } from '../../assets/logos/ReaktorLogo';
 import { AnimatedTitle } from '../AnimatedTitle';
 import { navbarItems } from '../../utils/navbarContent';
 import { useContext, useEffect, useRef, useState } from 'react';
