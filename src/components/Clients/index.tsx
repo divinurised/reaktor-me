@@ -6,7 +6,7 @@ export const Clients = () => {
       <h1 className="text-[28px] mb-24">Selected clients</h1>
       <div className="grid grid-cols-4">
         {clientLogos.map(logo => (
-          <div className="mb-16 flex">
+          <div className="mb-16 flex" key={logo?.image}>
             <img
               src={logo?.image}
               alt=""

@@ -5,12 +5,12 @@ export const ReaktorLogo = () => {
       height="44px"
       viewBox="0 0 26 44"
       xmlns="http://www.w3.org/2000/svg"
-      fill-rule="nonzero"
+      fillRule="nonzero"
       fill="#231F20"
-      className="group"
+      className="group dark:fill-white"
     >
       <title>Logo</title>
-      <g id="Symbols" stroke="none" stroke-width="1">
+      <g id="Symbols" stroke="none" strokeWidth="1">
         <g id="Artboard">
           <g id="R_Reaktor" transform="translate(0.000000, 4.000000)">
             <polygon

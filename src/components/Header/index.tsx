@@ -1,23 +1,32 @@
+import { useContext, useMemo, useRef } from 'react';
 import { ReaktorLogo } from '../../assets/logos/ReaktorLogo';
-import { AnimatedTitle } from '../AnimatedTitle';
-import { navbarItems } from '../../utils/navbarContent';
-import { useContext, useEffect, useRef, useState } from 'react';
 import { ScrollContext } from '../../contexts/ScrollContext';
+import { useTheme } from '../../hooks/useTheme';
+import { navbarItems } from '../../utils/navbarContent';
+import { AnimatedTitle } from '../AnimatedTitle';
 
 export const Header = () => {
   const headerRef = useRef<HTMLElement>(null);
   const { scrollY } = useContext(ScrollContext);
-  let progress = 0;
+  const { setTheme } = useTheme();
 
-  const { current: elementContainer } = headerRef;
-
-  if (elementContainer) {
-    progress = Math.min(1, scrollY / elementContainer.clientHeight);
-  }
+  useMemo(() => {
+    if (scrollY >= 100) {
+      setTheme('light');
+    } else {
+      setTheme('dark');
+    }
+  }, [scrollY]);
 
   return (
-    <header ref={headerRef} className="p-8 flex items-center justify-between">
-      <a href="/" className="font-bold text-xl leading-6 px-8">
+    <header
+      ref={headerRef}
+      className="p-8 flex items-center justify-between bg-white dark:bg-gray-200 transition-colors"
+    >
+      <a
+        href="/"
+        className="font-bold text-xl leading-6 px-8 dark:text-white text-gray-200"
+      >
         Reaktor
       </a>
       <a href="/">
@@ -26,7 +35,10 @@ export const Header = () => {
       <nav>
         <ul className="flex gap-4">
           {navbarItems.map(item => (
-            <li key={item.title} className="font-medium">
+            <li
+              key={item.title}
+              className="font-medium dark:text-white text-gray-200"
+            >
               <AnimatedTitle first={item.first} second={item.second} />
             </li>
           ))}

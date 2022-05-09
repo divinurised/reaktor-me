@@ -1,5 +1,5 @@
-import { AnimatedTitle } from '../AnimatedTitle';
 import { footerMenuContent } from '../../utils/footerMenuContent';
+import { AnimatedTitle } from '../AnimatedTitle';
 
 export const FooterMenu = () => {
   return (
@@ -7,6 +7,7 @@ export const FooterMenu = () => {
       <div className="flex flex-col items-start gap-7">
         {footerMenuContent.map(item => (
           <AnimatedTitle
+            key={item.first}
             first={item.first}
             second={item.second}
             className="text-5xl font-medium"

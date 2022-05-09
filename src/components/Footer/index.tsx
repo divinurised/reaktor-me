@@ -1,10 +1,10 @@
-import { address } from '../../utils/Address';
 import {
   RiFacebookBoxFill,
-  RiTwitterFill,
-  RiLinkedinBoxFill,
   RiInstagramFill,
+  RiLinkedinBoxFill,
+  RiTwitterFill,
 } from 'react-icons/ri';
+import { address } from '../../utils/Address';
 
 export const Footer = () => {
   return (
@@ -18,7 +18,7 @@ export const Footer = () => {
       <div className="w-[60%]">
         <div className="grid grid-cols-4 gap-16">
           {address.map(address => (
-            <div className="text-sm">
+            <div className="text-sm" key={address.city}>
               <h1
                 className={`${
                   address.title === 'Amsterdam' &&

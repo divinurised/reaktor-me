@@ -8,7 +8,7 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <>
       <button
-        className={`${className} py-4 px-12 border border-orange-100 rounded hover:bg-orange-100 transition-colors`}
+        className={`${className} py-4 px-12 border rounded-lg hover:bg-orange-100 transition-colors`}
         {...props}
       >
         {children}
